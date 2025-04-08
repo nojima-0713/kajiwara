@@ -1,0 +1,71 @@
+// main: ../style.scss
+@use '../mixin/mixin' as *;
+
+/*ページトップ*/
+
+#page_top {
+  position: fixed;
+  margin-left: 100px;
+  width: 23px;
+  height: 150px;
+  background-image: linear-gradient(to bottom, #0068B7 0, #0068B7 70%, #FAEC00 50%, #FAEC00 100%, #0068B7 100%);
+  right: 7px;
+  bottom: 30px;
+  z-index: 9999;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &:hover {
+    transform: translate(0, -10px);
+  }
+
+  span {
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    color: white;
+    z-index: 9999;
+    margin-top: 10px;
+  }
+}
+
+.btnFOut {
+  animation-name: 'FOut';
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  visibility: hidden;
+}
+
+@keyframes FOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.btnFIn {
+  animation-name: 'FIn';
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes FIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

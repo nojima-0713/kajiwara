@@ -1,0 +1,57 @@
+// main: ../archive.scss
+@use '../mixin/mixin' as *;
+
+/*ページネーション */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+  font-size: 13px;
+  color: #0068B7;
+  @include sp{
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  span, a {
+    display: block;
+    width: auto;
+    margin: 4px;
+    padding: 8px;
+    border: 1px solid #0068B7;
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 16px;
+    @include sp{
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+
+
+  a:hover, .current {
+    color: #FAEC00;
+    border-color: #0068B7;
+    background-color: #0068B7;
+    @include sp{
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  a {
+    &.prev {
+      margin-right: 16px;
+    }
+    &.next {
+      margin-left: 16px;
+    }
+  }
+
+  span.page_num {
+    display: none;
+  }
+}

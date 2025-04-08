@@ -1,0 +1,1321 @@
+// compileNested: ../css/$1.css
+@use '../mixin/mixin' as *;
+
+/*政策*/
+
+.policy{
+  margin-top: 6%;
+}
+
+.policy_new_title {
+  text-align: center;
+  margin-top: 1%;
+  img{
+    max-width: 410px;
+  }
+  @include sp{
+    img{
+      max-width: 315px;
+    }
+  }
+}
+
+.policy_title {
+  text-align: center;
+  margin-top: 1%;
+  @include sp{
+    img{
+      max-width: 90px;
+    }
+  }
+}
+
+.bg_border {
+  width: 100%;
+  height: 10px;
+  background-color: #0167b6;
+  background-image: linear-gradient(-90deg, #8fbdec 49%, transparent 41%);
+  background-size: 82px 15px;
+  margin: 6% 0 5%;
+  position: relative;
+  img{
+    right: 2%;
+    position: absolute;
+    bottom: 7%;
+    max-width: 200px;
+    @include sp{
+      width: 36%;
+    }
+  }
+}
+
+.first_border{
+  @include tab{
+    margin: 11% 0 5%;
+  }
+}
+
+.policy_block{
+  position: relative;
+  overflow: hidden;
+  padding: 173px 0;
+  @include tab-max{
+    width: 90%;
+  }
+  @include tab{
+    overflow: inherit;
+    width: 100%;
+  }
+}
+
+.policy_01 {
+  padding: 170px 0 212px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 124%;
+    height: 66%;
+    margin: 2% -10% 0;
+    background: #FAEC00;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: -1;
+  }
+  @include tab{
+    background: #FAEC00;
+    padding: 50px 0 83px 0;
+    margin-top: 10%;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      /*四角形を傾けます*/
+      transform: skewY(-5deg);
+      transform-origin: bottom left;
+      width: 100%;
+      height: 126px;
+      background: #FAEC00;
+      z-index: -1;
+      margin: 0;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -104px;
+      /*四角形を傾けます*/
+      transform: skewY(-5deg);
+      transform-origin: bottom left;
+      width: 100%;
+      height: 107px;
+      background: #FAEC00;
+      z-index: 1;
+    }
+  }
+  @include sp{
+    padding-bottom: 14px;
+  }
+}
+
+.policy_02 {
+  padding: 90px 0 216px 0;
+  margin-top: -200px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 114%;
+    height: 66%;
+    margin: 2% -10% 0;
+    background: #0068B7;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: -1;
+  }
+
+  @include tab{
+    background: #0068B7;
+    margin-top: 0;
+    padding: 90px 0 67px 0;
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -94px;
+      /*四角形を傾けます*/
+      transform: skewY(-5deg);
+      transform-origin: bottom left;
+      width: 100%;
+      height: 107px;
+      background: #0068B7;
+      z-index: 1;
+    }
+    &::before{
+      content: none;
+    }
+  }
+  @include sp{
+    padding-bottom: 20px;
+  }
+}
+
+.policy_03 {
+  margin-top: -233px;
+  padding: 173px 0 224px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 114%;
+    height: 66%;
+    margin: 2% -10% 0;
+    background: #6C6C6C;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: -1;
+  }
+  @include tab{
+    margin-top: 0;
+    background: #6C6C6C;
+    padding: 173px 0 62px 0;
+    margin-bottom: 24%;
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -94px;
+      /*四角形を傾けます*/
+      transform: skewY(-5deg);
+      transform-origin: bottom left;
+      width: 100%;
+      height: 107px;
+      background: #6C6C6C;
+      z-index: 0;
+    }
+    &::before{
+      content: none;
+    }
+  }
+  @include sp{
+    padding-bottom: 23px;
+  }
+
+}
+
+
+.p_main {
+  font-weight: 700;
+  color: #004B99;
+  margin-bottom: 35px;
+  font-size: 18px;
+  @include pc{
+    margin-top: -5%;
+    margin-bottom: 12px;
+  }
+  @include tab{
+    margin-top: 26px;
+  }
+}
+
+.p_main_2{
+  @include tab{
+    margin-top: 0;
+  }
+}
+
+.p_main_2, .p_main_3 {
+  font-weight: 700;
+  color: #FAEC00;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+.p_main_3{
+  @include pc{
+    margin-bottom: 12px;
+    margin-top: 30px;
+  }
+}
+
+@include sp{
+  .p_main,.p_main_2,.p_main_3{
+    font-size: 16px;
+  }  
+}
+
+
+@include tab{
+  .p01_box, .p02_box, .p03_box {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 28px 0;
+  }
+}
+
+.p_ob {
+  font-style: italic;
+  font-weight: 700;
+  color: #004B99;
+  font-size: 20px;
+  @include tab{
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+.p_ob_2, .p_ob_3 {
+  font-style: italic;
+  font-weight: 700;
+  color: #FAEC00;
+  font-size: 20px;
+  @include tab{
+    margin: 20px 0;
+    text-align: center;
+    color: #004B99;
+  }
+}
+
+@include sp{
+  .p_ob,.p_ob_2,.p_ob_3{
+    font-size: 18px;
+    margin: 11px 0;
+  }
+}
+
+.p_ob span, .p_ob_2 span, .p_ob_3 span {
+  font-size: 10px;
+}
+
+.p_01 {
+  margin-bottom: 20px;
+  @include pc{
+    margin-bottom: 9px;
+  }
+  @include tab{
+    margin-bottom: 20px;
+  }
+}
+
+.p_02, .p_03 {
+  color: white;
+  margin-bottom: 20px;
+  @include tab{
+    color: #4e4e4e;
+  }
+}
+
+@include sp{
+  .p_01,.p_02,.p_03{
+    font-size: 15px;
+  }
+}
+
+.policy01_inner, .policy02_inner, .policy03_inner {
+  display: flex;
+  @include tab{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.policy01_inner {
+  margin-top: 30px;
+}
+
+.policy02_inner {
+  align-items: center;
+  @include tab{
+    flex-direction: column-reverse;
+  }
+}
+
+.policy_01_img{
+  width: 44%;
+  img {
+    width: 80%;
+    max-height: 480px;
+    margin-left: 6%;
+  }
+  @include tab{
+    margin-top: -20px;
+    text-align: center;
+    width: 63%;
+    img {
+      margin-left: 0;
+    }
+  }
+  @include sp{
+    width: 100%;
+  }
+}
+
+.policy_02_img{
+  width: 44%;
+  img {
+    width: 90%;
+    max-height: 480px;
+    margin-top: 27px;
+  }
+  @include tab{
+    width: 60%;
+    margin-top: 3%;
+  }
+  @include sp{
+    width: 96%;
+  }
+}
+
+.policy_03_img {
+  width: 44%;
+  margin-left: 3%;
+  margin-top: 2%;
+  img {
+    width: 93%;
+    max-height: 480px;
+  }
+  @include tab{
+    margin: 0;
+    width: 60%;
+    text-align: center;
+  }
+  @include sp{
+    width: 93%;
+  }
+}
+
+.policy_01_text, .policy_02_text, .policy_03_text {
+  width: 56%;
+  text-align: justify;
+}
+
+.policy_01_text {
+  margin-right: 8%;
+  @include pc{
+    margin-right: 5%;
+  }
+  @include tab{
+    margin-right: 0;
+    width: 70%;
+  }
+}
+
+.policy_02_text {
+  margin-top: 9%;
+  margin-left: 3%;
+  @include pc{
+    margin-top: 5%;
+  }
+  @include tab{
+    margin-left: 0;
+    width: 70%;
+  }
+}
+
+.policy_03_text {
+  margin-right: 10%;
+  @include tab{
+    margin: 0;
+    width: 70%;
+  }
+}
+
+.policy_inner_old{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/*政策更新*/
+
+
+
+.policy_inner{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1150px;
+  position: relative;
+  @include sp{
+    padding-top: 4%;
+  }
+  img{
+    width: 100%;
+  }
+  img.pol-tit-1{
+    max-width: 225px;
+    position: absolute;
+    top: -5%;
+    left: 2%;
+    width: 33%;
+    @include tab{
+      width: 25%;
+    }
+    @include sp{
+      top: -3%;
+    }
+  }
+  &_block{
+    width: 100%;
+    background-color: #D3EDFB;
+    border-radius: 2em;
+    margin-bottom: 4%;
+    &:last-child{
+      background-color: #FFF8A5;
+      background-image: url(../images/ps-last-back.png);
+      background-size: 51%;
+      background-position: right -48px bottom -25px;
+      background-repeat: no-repeat;
+      @include sp{
+        background-size: 106%;
+      }
+    }
+  }
+  .pol_inner_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 4em 2em;
+    @include tab-max{
+      padding: 2em 1em;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+  }
+  .pol_inner_flex_1{
+    padding: 6em 2em 4em;
+    @include sp{
+      flex-direction: column;
+      padding: 2em 2em 2em;
+    }
+  }
+  .pol_inner_flex_3{
+    justify-content: space-between;
+    @include sp{
+      flex-direction: column;
+    }
+  }
+  .pol_flex_text{
+    width: 36%;
+    margin-bottom: 5%;
+    @include tab-max{
+      width: 45%;
+    }
+    @include sp{
+      width: 100%;
+    }
+  }
+  .pol_flex_pic{
+    width: 53%;
+    text-align: center;
+    img{
+      width: 80%;
+    }
+    @include sp{
+      width: 100%;
+      img{
+        width: 95%;
+      }
+    }
+  }
+
+  img.pol-yer{
+    max-width: 120px;
+    @include sp{
+      max-width: 86px;
+    }
+  }
+
+  img.pol-yer-1,.pol-yer-4,.pol-yer-5{
+    margin-bottom: 4%;
+  }
+
+  .pol_inner_flex_2{
+    justify-content: space-around;
+    border-bottom: 2px solid $sub_color;
+    &:nth-of-type(2){
+      flex-direction: row-reverse;
+      @include sp{
+        flex-direction: column;
+      }
+    }
+    &:last-of-type{
+      border-bottom: none;
+    }
+  }
+
+  .pol_flex_text_2{
+    width: 17%;
+    text-align: center;
+    @include sp{
+      width: 95%;
+      text-align: left;
+      margin-bottom: 3%;
+    }
+  }
+
+  .pol_flex_pic_2{
+    width: 37%;
+    p{
+      margin-bottom: 4%;
+    }
+    &:nth-of-type(3){
+      width: 26%;
+      p{
+        margin-top: 5%;
+      }
+      @include sp{
+        width: 95%;
+        margin-top: 4%;
+      }
+    }
+    @include sp{
+      width: 95%;
+      .pol-bt-3{
+        width: 76%;
+      }
+    }
+  }
+
+  .pol_flex_wrap{
+    width: 45%;
+    position: relative;
+    p{
+      margin-bottom: 2%;
+    }
+    .pol_flex_wrap_inner{
+      margin-top: 3%;
+    }
+    @include tab-max{
+      .pol_flex_wrap_bottom{
+        width: 61%;
+      }
+    }
+    @include sp{
+      width: 95%;
+    }
+  }
+  
+
+  .pol_flex_pic_3{
+    width: 50%;
+    p{
+      margin-bottom: 2%;
+    }
+    img{
+      width: 90%;
+    }
+    @include sp{
+      width: 95%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  img.pol-yer-3{
+    margin-bottom: 4%;
+  }
+
+  img.pol-bt-5{
+    max-width: 167px;
+    position: absolute;
+    right: 0;
+    top: 67%;
+    width: 80%;
+    @include tab-max{
+      top: 55%;
+      width: 39%;
+    }
+  }
+
+  .pol_flex_wrap_inner{
+    span{
+      font-weight: bold;
+      font-size: 1.2em;
+      color: $main_color;
+      display: inline-block;
+    }
+  }
+
+  .pol_inner_flex_4{
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 4em 2em 9em;
+    @include tab-max{
+      padding: 4em 2em;
+    }
+    @include sp{
+      flex-direction: column;
+      padding: 2em 2em 10em;
+    }
+  }
+
+  .pol_flex_pic_4{
+    width: 45%;
+    p{
+      margin-top: 2%;
+    }
+    &:last-child{
+      p{
+        margin-top: 0;
+        margin-bottom: 2%;
+      }
+    }
+    @include sp{
+      width: 100%;
+      margin-bottom: 6%;
+    }
+  }
+
+  .pol_flex_pic_4_box{
+    position: relative;
+  }
+
+  img.pol-bt-8{
+    width: 90%;
+  }
+
+  img.pol-bt-9{
+    position: absolute;
+    max-width: 175px;
+    right: -4%;
+    top: 80%;
+    width: 40%;
+  }
+
+}
+
+.policy_inner_fst{
+  @include sp{
+    padding-top: 19%;
+    img.pol-tit-1 {
+      top: 0%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 37%;
+    } 
+  }
+}
+
+
+
+/*府議会議員編*/
+
+.policy_inner_2_tit{
+  position: relative;
+  margin-bottom: 14%;
+  @include tab-max{
+    margin-bottom: 17%;
+  }
+  @include sp{
+    margin-top: 8%;
+    margin-bottom: 20%;
+  }
+  &_block{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include sp{
+      flex-direction: column;
+    }
+    img{
+      max-width: 180px;
+      width: 24%;
+      @include sp{
+        width: 39%;
+      }
+    }
+    div{
+      margin-left: 2%;
+      @include sp{
+        margin-bottom: 7%;
+        margin-left: 0;
+      }
+    }
+    h2,p{
+      color: $main_color;
+      font-weight: bold;
+    }
+    h2{
+      font-size: 2em;
+      @include sp{
+        text-align: center;
+      }
+    }
+  }
+  .bg_border{
+    margin: -2% 0 0%;
+    z-index: -1;
+  }
+  .kosodate-tit{
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 26%;
+    @include tab-max{
+      width: 32%;
+    }
+    @include sp{
+      width: 51%;
+    }
+  }
+}
+
+img.pol-tit-2{
+  max-width: 280px;
+  position: absolute;
+  left: -5%;
+  width: 27%;
+  bottom: -77%;
+  @include tab-max{
+    width: 24%;
+  }
+  @include sp{
+    width: 32%;
+    z-index: 2;
+    left: -4%;
+    bottom: -37%;
+
+  }
+}
+
+.policy_inner_an_tit{
+  margin-bottom: 187px;
+  @include sp{
+    margin-bottom: 132px;
+  }
+}
+
+  .policy_inner{
+
+    .pol_inner_flex_2{
+      position: relative;
+      @include tab-max{
+        width: 100%;
+      }
+      @include sp{
+        flex-direction: column;
+      }
+      .kaji-ok{
+        position: absolute;
+        max-width: 150px;
+        right: 0;
+        bottom: 0;
+        @include tab-max{
+          max-width: 128px;
+          right: -28px;
+          bottom: 0%;
+        }
+        @include sp{
+          right: 0;
+          bottom: 0;
+        }
+      }
+
+      .pol_inner_flex_text{
+        width: 60%;
+        @include sp{
+          width: 100%;
+        }
+      }
+
+    }
+
+    .pol_inner_flex_text{
+      width: 50%;
+      .pol-strong{
+        font-size: 2em;
+        font-weight: bold;
+        color: $main_color;
+        display: inline-block;
+        position: relative;
+        line-height: 1.2;
+        &::after{
+          content: '';
+          background-image: url(../images/pol-first.svg);
+          background-repeat: no-repeat;
+          background-position: right;
+          max-width: 97px;
+          height: 103px;
+          width: 23%;
+          position: absolute;
+          right: -25%;
+          bottom: 9%;
+          @include tab-max{
+            width: 20%;
+            right: -24%;
+            bottom: 9%;
+          }
+          @include sp{
+            width: 24%;
+            right: -6%;
+            bottom: -3%;
+          }
+        }
+      }
+      .pol-strong-2{
+        &::after{
+          @include tab-max{
+            right: -16%;
+          }
+          @include sp{
+            width: 24%;
+            right: -2%;
+          }
+        }
+      }
+      .pol-weight{
+        font-weight: bold;
+        display: inline-block;
+        width: 80%;
+        text-align: justify;
+        font-size: 1.2em;
+        margin: 3% 0;
+        @include sp{
+          width: 100%;
+          font-size: 1.1em;
+        }
+      }
+      &_bottom{
+        background-color: #D3EDFB;
+        padding: 4% 6%;
+        border-radius: 1em;
+        margin-top: 2%;
+        width: 100%;
+      }
+
+    }
+
+    .pol_inner_flex_image{
+      width: 40%;
+      .pol-giin-img2{
+        max-width: 255px;
+        @include tab-max{
+          width: 59%;
+        }
+      }
+      .pol-giin-img3{
+        max-width: 304px;
+      }
+      @include sp{
+        width: 95%;
+        margin-top: 6%;
+      }
+    }
+
+    .policy_inner_2{
+      margin-bottom: 7%;
+    }
+  }
+
+    .policy_an_block{
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1150px;
+
+    .pol_inner_flex_an{
+      background-color: #FFF8A5;
+      border-radius: 1em;
+      flex-wrap: wrap;
+      margin-bottom: 3%;
+      justify-content: space-around;
+      @include tab-max{
+        flex-direction: column;
+      }
+
+      .pol_inner_flex_image{
+        width: 50%;
+        position: relative;
+        @include tab-max{
+          width: 87%;
+        }
+        @include sp{
+          text-align: center;
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      .pol_inner_flex_text{
+        width: 40%;
+        @include tab-max{
+          width: 87%;
+        }
+        @include sp{
+          width: 100%;
+        }
+      }
+      .anshin2{
+        width: 90%;
+        margin-top: 5%;
+        @include tab-max{
+          width: 81%;
+        }
+        @include sp{
+          width: 100%;
+        }
+      }
+      .anshin3{
+        max-width: 175px;
+        position: absolute;
+        right: -8%;
+        top: -49%;
+        width: 34%;
+        @include tab-max{
+          right: -7%;
+          top: 7%;
+          width: 30%;
+          margin-top: 4%;
+        }
+        @include sp{
+          width: 60%;
+          position: relative;
+          margin: 0 auto;
+        }
+      }
+      .anshin4{
+        max-width: 210px;
+      }
+    }
+
+    .comm-block{
+      width: 100%;
+      @include tab-max{
+        text-align: center;
+      }
+    }
+    .comment {
+      background: $main_color;
+      border-radius: 2em;
+      color: white;
+      padding: 10px 2em;
+      position: relative;
+      margin-bottom: 5%;
+      display: inline-block;
+      p{
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
+      }
+    }
+    
+    /* 吹き出し(下) */
+    .balloon-under::after {
+      border-left: solid 7px transparent;
+      border-right: solid 7px transparent;
+      border-top: solid 10px $main_color;
+      bottom: -10px;
+      content: "";
+      display: block;
+      height: 0;
+      left: 50%;
+      margin-left: -5px;
+      position: absolute;
+      width: 0;
+    }
+  }
+
+
+.policy_inner_an{
+  width: 100%;
+  .pol_inner_flex_an{
+    .pol_inner_flex_text{
+      > p{
+        font-size: 1.1em;
+      }
+    }
+  }
+  &:first-of-type{
+    @include tab-max{
+      .pol_inner_flex_text{
+        margin-top: 4%;
+      }
+    }
+  }
+  &:nth-of-type(even){
+    .pol_inner_flex_an{
+      flex-direction: row-reverse;
+      @include tab-max{
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  &:nth-last-of-type(-n+2){
+    width: 48%;
+    .pol_inner_flex_an{
+      padding: 2em;
+      @include tab-max{
+        flex-direction: row;
+        .pol_inner_flex_image{
+          width: 40%;
+        }
+        .pol_inner_flex_text{
+          width: 45%;
+          .kaji-check{
+            width: 85%;
+          }
+        }
+      }
+      @include sp{
+        padding: 2em 1em;
+        .pol_inner_flex_image{
+          width: 47%;
+        }
+        .pol_inner_flex_text{
+          width: 47%;
+        }
+      }
+    }
+    .comm-block{
+      text-align: center;
+    }
+    @include tab-max{
+      width: 100%;
+    }
+  }
+  &:nth-last-of-type(2){
+    .pol_inner_flex_an{
+      align-items: end;
+      @include tab-max{
+        align-items: center;
+        .pol_inner_flex_image{
+          text-align: center;
+        }
+      }
+    }
+  }
+  &:last-of-type{
+    .pol_inner_flex_an{
+      flex-direction: column;
+      .pol_inner_flex_text,.pol_inner_flex_image{
+        width: 80%;
+        @include sp{
+          width: 100%;
+        }
+      }
+      .pol_inner_flex_text{
+        margin-bottom: 2%;
+      }
+    }
+  }
+}
+
+.policy_kyoto{
+  background-color: $sub_color;
+  margin-bottom: 2%;
+  padding-bottom: 9%;
+  margin-top: 3%;
+  padding-top: 3%;
+  &_tit{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1150px;
+    text-align: center;
+    img{
+      width: 90%;
+      @include sp{
+        width: 100%;
+      }
+    }
+  }
+  &_wrap{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1150px;
+    padding: 5em 7em;
+    @include tab-max{
+      padding: 5em 3em;
+    }
+    @include sp{
+      padding: 2em 1em;
+    }
+  }
+  &_block{
+    position: relative;
+    &:nth-of-type(3){
+      margin: 5% 0% 0;
+    }
+    &_tit{
+      margin-bottom: 2%;
+      position: relative;
+      &::before{
+        content: '';
+        background-image: url(../images/kyoto_tit_tp.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        width: 21px;
+        height: 50px;
+        position: absolute;
+        top: -11px;
+      }
+      p{
+        font-weight: bold;
+        color: $main_color;
+        font-size: 2.5em;
+        margin-left: 3%;
+        @include sp{
+          margin-left: 0;
+          text-align: center;
+          font-size: 2em;
+        }
+      }
+      .y-m-text{
+        position: absolute;
+        right: -12%;
+        top: -27%;
+        max-width: 200px;
+        @include sp{
+          right: 0;
+          top: -21px;
+          margin: auto;
+        }
+      }
+      @include sp{
+        padding-top: 43%;
+      }
+    }
+    &_tit_2{
+      @include sp{
+        padding-top: 55%;
+      }
+    }
+    &_tit_3{
+      @include sp{
+        padding-top: 19%;
+      }
+    }
+    &_text{
+      width: 92%;
+      p{
+        text-align: justify;
+        line-height: 2;
+        @include sp{
+          line-height: 1.5;
+        }
+      }
+      @include sp{
+        width: 100%;
+      }
+    }
+    .pol-kyoto-1{
+      max-width: 193px;
+      position: absolute;
+      right: 0;
+      width: 22%;
+      top: -85px;
+      @include sp{
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 52%;
+        top: 0%;
+        margin: 0 auto;
+      }
+    }
+
+    .pol-kyoto-2{
+      max-width: 228px;
+      position: absolute;
+      right: -10%;
+      top: -123px;
+      width: 24%;
+      @include tab-max{
+        right: -8%;
+      }
+      @include sp{
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 0;
+        width: 56%;
+      }
+    }
+
+    .policy_kyoto_block_flex{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .policy_kyoto_block_text{
+        width: 57%;
+        @include sp{
+          width: 100%;
+          margin-top: 4%;
+        }
+      }
+      .policy_kyoto_block_image{
+        width: 38%;
+        position: relative;
+        @include sp{
+          width: 73%;
+        }
+      }
+      @include sp{
+        flex-direction: column-reverse;
+      }
+    }
+
+    .pol-kyoto-3{
+      max-width: 332px;
+      width: 100%;
+    }
+
+    .pol-kyoto-4{
+      position: absolute;
+      max-width: 200px;
+      bottom: -33%;
+      right: 0;
+      width: 59%;
+      @include sp{
+        position: absolute;
+        max-width: 200px;
+        bottom: 0%;
+        right: -39%;
+        width: 59%;
+      }
+    }
+
+  }
+}
+
+.kyoto_bg_border {
+  width: 100%;
+  height: 20px;
+  background-image: url(../images/kyoto-bg.svg);
+  background-size: contain;
+  margin: 4% 0 5%;
+  position: relative;
+}

@@ -1,0 +1,124 @@
+// main: ../style.scss
+
+@charset "UTF-8";
+//変数
+$main_color: #0068B7;
+$font_color: #3e3e3e;
+$sub_color: #FAEC00;
+$pc_fontsize: 19px;
+$sp_fontsize: 18px;
+$res_fontsize: 16px;
+
+//ブレークポイント
+  $pc: 1300px; // PC
+  $tab-min: 600px;
+  $tab-max: 930px;
+  $tab: 1050px; // タブレット
+  $sp: 530px;  // スマホ
+  $sp-se: 350px;
+
+  @mixin pc {
+    @media (max-width: ($pc)) {
+      @content;
+    }
+  }
+
+  @mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+
+  @mixin tab-min {
+    @media (max-width: ($tab-min)) {
+      @content;
+    }
+  }
+
+  @mixin tab-max {
+    @media (max-width: ($tab-max)) {
+      @content;
+    }
+  }
+
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+  @mixin sp-se{
+    @media (max-width: ($sp-se)) {
+      @content;
+    }
+  }
+
+  @mixin sp-max {
+    @media (min-width: ($sp)) {
+      @content;
+    }
+  }
+
+  @mixin title(
+    $title_size: 30px,
+    $title_weight: 700,
+    $title_color: #0068B7
+    )
+    {
+      font-size: $title_size;
+      font-weight: $title_weight;
+      color: $title_color;
+
+      @include sp{
+        font-size: 28px;
+      }
+    }
+
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] ,
+input[type="reset"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: none;
+  appearance: button;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+    &::-webkit-search-decoration {
+      display: none;
+    }
+    &:focus {
+      outline-offset: -2px;
+    }
+}
+
+//780pxより広くなったら改行なくす
+.sp_br{
+  @include tab-max{
+    display: none;
+  }
+}
+
+//480pxより広くなったら改行なくす
+.br_sp{
+  @include sp-max{
+    display: none;
+  }
+}
+
+//480pxより狭くなったら改行なくす
+.br_sp_min{
+  @include sp{
+    display: none;
+  }
+}
+
+//優先的に改行
+span.aks{
+  display: inline-block;
+}
+

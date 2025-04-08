@@ -1,0 +1,274 @@
+// main: ../style.scss
+@use '../mixin/mixin' as *;
+/*コンタクトフォーム*/
+
+.contact {
+  text-align: center;
+  margin-bottom: 14%;
+  @include tab{
+    margin-bottom: 26%;
+  }
+  @include tab-min{
+    margin-bottom: 47%;
+  }
+}
+
+.contact_title{
+  @include sp{
+    img{
+      max-width: 215px;
+    }
+  }
+}
+
+.contact_box {
+  display: inline-block;
+}
+
+.box_inner_title {
+  display: inline-block;
+  margin-top: 4%;
+  width: 85%;
+  @include sp{
+    font-size: 15px;
+    width: 90%;
+    margin-top: 9%;
+    margin-bottom: 3%;
+  }
+}
+
+.form__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  .is-required label span {
+    top: 0;
+    left: 0;
+    width: 26px;
+    padding: 3px 10px;
+    background: #CC0011;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 500;
+  }
+  @include tab-max{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form__wrap {
+  width: 98%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+
+.form__label {
+  width: 30%;
+  text-align: left;
+  label {
+    display: block;
+    span {
+      top: 0;
+      left: 0;
+      width: 26px;
+      padding: 3px 10px;
+      background: #41569D;
+      color: white;
+      font-size: 11px;
+      text-align: center;
+      margin-right: 10px;
+      font-weight: 500;
+    }
+    @include sp{
+      font-size: 15px;
+      width: 89%;
+      margin: 0 auto;
+    }
+  }
+  @include tab-max{
+    width: 100%;
+    max-width: 500px;
+  }
+  @include sp{
+    max-width: 366px;
+  }
+}
+
+.form__body {
+  width: 70%;
+
+  input {
+    &[type="text"], &[type="tel"], &[type="email"] {
+      border: none;
+      background-color: #F0F0F4;
+      border-radius: 3px;
+      padding: 8px 5px;
+      width: 100%;
+      color: #3e3e3e;
+      font-weight: 500;
+      box-sizing: border-box;
+      max-width: 500px;
+      &:focus{
+        outline: 0;
+        box-shadow: 0 0 3px 3px rgba(135, 136, 177, 0.37);
+        transition: .3s;
+      }
+    }
+  }
+
+  textarea {
+    border: none;
+    background-color: #F0F0F4;
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px 5px;
+    color: #3e3e3e;
+    font-weight: 500;
+    box-sizing: border-box;
+    max-width: 500px;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 3px 3px rgba(135, 136, 177, 0.37);
+      transition: .3s;
+    }
+  }
+
+  @include tab-max{
+    width: 100%;
+    margin-top: 10px;
+  }
+  @include sp{
+    width: 86%;
+  }
+}
+
+.form__check{
+  margin: 0 auto;
+  @include sp{
+    width: 86%;
+  }
+}
+
+/*送信ボタン*/
+
+.submit-btn {
+  margin: 0 auto;
+
+  input[type="submit"] {
+    background: #005CA7;
+    color: white;
+    padding: 8px 15px;
+    width: 250px;
+    max-width: 100%;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #005CA7;
+    transition: opacity .25s, background-color .25s;
+    display: block;
+
+    &:disabled {
+      cursor: not-allowed;
+      box-shadow: none !important;
+      border: 1px solid #f8f8f8 !important;
+      background-color: #f8f8f8 !important;
+      color: #929292 !important;
+    }
+
+    &:hover {
+      border: 1px solid #005CA7;
+      background-color: #fff;
+      color: #005CA7;
+    }
+
+    &:focus {
+      outline: 1px #eee solid;
+      border: 1px #FAEC00 solid;
+    }
+  }
+}
+
+/* チェックボックス */
+
+.form__check input[type=checkbox] {
+  display: none;
+
+  + span {
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 0 1em 0 1.8em;
+    font-size: inherit;
+    box-sizing: border-box;
+    transition: opacity .25s ease;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 1.24em;
+      height: 1.24em;
+      border: 1px solid #005CA7;
+      border-radius: 4px;
+      background-color: #fefefe;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: "";
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 0.35em;
+      left: 0.44em;
+      width: 0.4em;
+      height: .8em;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      box-sizing: border-box;
+      transform: rotate(40deg);
+    }
+    @include sp{
+      font-size: 14px;
+    }
+  }
+
+  &:checked + span {
+    &::before {
+      opacity: 1;
+      border: 1px solid #005CA7;
+      background-color: #005CA7;
+    }
+
+    &::after {
+      opacity: 1;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+    }
+  }
+}
+
+span.wpcf7-list-item {
+  margin: 0;
+}
+
+.recaptcha_policy{
+  width: 94%;
+  margin: 0 auto;
+  font-size: 14px;
+  a{
+    color: #005ca7;
+  }
+}
+
+.grecaptcha-badge {
+   visibility: hidden; 
+  }

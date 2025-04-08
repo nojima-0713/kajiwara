@@ -1,0 +1,64 @@
+// compileNested: ../css/$1.css
+@use '../mixin/mixin' as *;
+
+/*宣誓*/
+
+.message {
+  width: 100%;
+  text-align: center;
+  margin-top: 11%;
+}
+
+.message_title {
+  margin-bottom: 5%;
+  @include sp{
+    img:first-child {
+      margin-bottom: 2%;
+      max-width: 100px;
+    }
+  }
+}
+
+.message_text {
+  padding-bottom: 55%;
+  width: 80%;
+  margin: 0 auto;
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    @include sp{
+      font-size: 15px;
+    }
+  }
+}
+
+.message_inner {
+  background: url(../images/message_back.png);
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/*活動動画*/
+
+.movie_title {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  @include sp{
+    img{
+      max-width: 140px;
+    }
+  }
+}
+
+.movie_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  iframe {
+    margin: 10px;
+  }
+}

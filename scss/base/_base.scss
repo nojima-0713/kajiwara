@@ -1,0 +1,59 @@
+// main: ../style.scss
+
+@use '../mixin/mixin' as *;
+
+body {
+  font-family: 'Noto Sans JP', 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo,"Font Awesome 5 Free", sans-serif;
+  font-feature-settings: "palt";
+}
+
+.wrapper {
+  color: #3E3E3E;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 18px;
+  @include tab-max{
+    font-size: 17px;
+  }
+  @include sp{
+    font-size: 16px;
+  }
+}
+
+
+b, strong, .bold{
+  font-family:  Avenir, "Helvetica neue", Helvetica, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+}
+
+.serif{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+_:lang(x)::-ms-backdrop, body, body.mceContentBody, .comment-btn, #bbp_reply_submit, .bp-login-widget-register-link a, .search-edit, input[type="submit"] , b, strong, .bold .article h2, .article h3, .article h4, .entry-card-title, .blogcard-title, .wp-block-button__link {
+	font-family: "Segoe UI", "メイリオ", Meiryo, sans-serif;
+}
+
+
+//改行
+span.aks{
+  display: inline-block;
+}
+
+.page-wrapp{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 10%;
+  @include tab{
+    margin-bottom: 12%;
+  }
+}
+
+.wp-block-buttons{
+  justify-content: center;
+}

@@ -1,0 +1,110 @@
+// main: ../style-s.scss
+@use '../mixin/mixin' as *;
+
+/*前の記事、次の記事*/
+
+.p_page_pager_block{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding-top: 4%;
+  margin-top: 5%;
+  border-top: 2px solid #0068B7;
+  max-width: 900px;
+  @include tab{
+    order: 2;
+    margin-top: 8%;
+  }
+}
+
+.p_page_pager{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  @include sp{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.p_pager_prev,.p_pager_next,.top_prev,.top_next{
+  width: 40%;
+  transition: .3s;
+  padding: 6px;
+  border-radius: 26px;
+  color: #0068B7;
+  position: relative;
+  p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $font_color;
+    transition: .3s;
+  }
+  &:hover{
+    p{
+      color: $main_color;
+    }
+  }
+  &::after{
+  display: inline-block;
+  transition-duration: .3s;
+  transition-property: right,left;
+  width: 11px;
+  height: 14px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 34%;
+}
+  @include sp{
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.p_pager_prev{
+  p{
+    padding-left: 22px;
+  }
+  &::after{
+    content: '';
+    background-image: url(../images/chevron-thin-left.svg);
+    background-position: center left;
+    background-size: contain;
+    left: 5%;
+    transition-property: left;
+  }
+}
+
+.p_pager_next{
+  p{
+    padding-right: 22px;
+  }
+  &:after{
+    content: '';
+    background-image: url(../images/chevron-thin-right.svg);
+    background-position: center right;
+    background-size: contain;
+    right: 5%;
+    transition-property: right;
+  }
+}
+
+.top_prev,.top_next{
+  color: #616161;
+}
+
+.p_pager_next,.top_prev{
+  margin-left: auto;
+  text-align: right;
+}
+
+.fa-angle-right:before{
+  margin-left: 5px;
+}
+
+.fa-angle-left::before{
+  margin-right: 5px;
+}
+

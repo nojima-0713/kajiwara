@@ -1,0 +1,162 @@
+// main: ../single.scss
+@use '../mixin/mixin' as *;
+
+/* Sidebar */
+
+#sidebar {
+  margin-top: 2.5%;
+  width: 21%;
+  margin-right: 3%;
+  margin-left: 1%;
+  @include pc{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3%;
+    max-width: 900px;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin-bottom: 6%;
+      margin-top: 7%;
+      background-color: #FAEC00;
+    }
+  }
+}
+
+.sidebar-wrapper {
+  margin-bottom: 5%;
+  ul li {
+    color: #00479D;
+    font-size: 15px;
+    &:hover {
+      color: #D04848;
+    }
+    a{
+      display: block;
+    }
+  }
+}
+
+.cat-item a{
+  display: block;
+}
+
+.cat-item a::before {
+  content: '\f105';
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 5px;
+  font-weight: 900;
+}
+
+.sidebar-title {
+  color: white;
+  background: #0068B7;
+  padding: .2em .6em;
+  margin: 10px 0px;
+}
+
+.go_back {
+  display: inline-block;
+  a {
+    color: #00479D;
+    padding: .3em;
+  }
+  &:hover{
+    a{
+      color: #D04848;
+    }
+  }
+}
+
+
+/*カレンダー*/
+
+.calendar_wrap {
+  color: #333;
+}
+
+#wp-calendar {
+  width: 100%;
+  font-size: 13px;
+  padding-top: 10px;
+  caption {
+    margin-bottom: -10px;
+  }
+  tr {
+    display: flex;
+    justify-content: flex-start;
+
+    &:first-of-type {
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+  }
+  thead {
+    border-bottom: 1px solid #5b5b5b;
+  }
+  tbody {
+    margin-top: 10px;
+  }
+  th {
+    display: block;
+    width: calc(100% / 7);
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  td {
+    display: block;
+    width: calc(100% / 7);
+    text-align: center;
+    margin-bottom: 10px;
+    a {
+      padding: 0;
+      color: #ff9d1b;
+      border-bottom: 1px solid #ffa928;
+    }
+  }
+  tfoot tr {
+    display: flex;
+    justify-content: center;
+    td {
+      width: calc(100% / 3);
+    }
+  }
+  #today {
+    font-weight: bold;
+    a {
+      font-weight: bold;
+    }
+  }
+  .sat{
+    color: #1964e4;
+  }
+  .sun{
+    color: #f53c3c;
+  }
+  @include pc{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+    font-size: 15px;
+    td {
+      margin-bottom: 12px;
+    }
+  }
+  @include sp{
+    width: 95%;
+  }
+}
+
+.wp-calendar-nav {
+  font-size: 15px;
+  @include pc{
+    width: 50%;
+    margin: 0 auto;
+  }
+  @include sp{
+    width: 95%;
+  }
+}

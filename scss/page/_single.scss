@@ -1,0 +1,122 @@
+// main: ../single.scss
+@use '../mixin/mixin' as *;
+
+.content_single {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 10%;
+  @include pc{
+    flex-flow: column;
+  }
+}
+
+.article-content {
+  width: 90%;
+  margin: 0 auto;
+  color: #1A1311;
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 5%;
+  margin-top: 20px;
+}
+
+.article-title-s {
+  font-size: 35px;
+  color: #171C61;
+  margin: 0.4em 0;
+  @include sp{
+    font-size: 24px;
+  }
+}
+
+.article-info {
+  margin: 0 auto;
+  max-width: 900px;
+  border-bottom: 3px solid #00AFCC;
+  margin-bottom: 5%;
+
+  .cat-data {
+    display: block;
+    text-align: right;
+    margin-bottom: 2%;
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #171C61;
+      padding: 0.6rem 1.2rem;
+      font-size: 13px;
+      @include sp{
+        padding: 0.3rem 1.2rem;
+      }
+    }
+  }
+}
+
+.wp-block-image {
+  display: block !important;
+  margin-top: 32px;
+  img{
+    border: 1px solid #ccc;
+    max-width: 700px;
+  }
+  @include pc{
+    img{
+      width: 90%;
+      height: auto;
+    }
+  }
+  @include sp{
+    margin-top: 12px;
+  }
+}
+
+.img-wrap {
+  text-align: center;
+}
+
+.wp-block-preformatted {
+  padding: 20px;
+}
+
+.article-content p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #3e3e3e;
+
+  a {
+    text-decoration: none;
+    color: #00479D;
+    font-size: 18px;
+    border: 2px solid;
+    padding: 12px 0;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    margin-top: 3%;
+    @include sp{
+      margin-top: 6%;
+    }
+
+    &:hover {
+      color: #00AFCC;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 21px;
+      height: 23px;
+      background-image: url(../images/pdf_icon.svg);
+      background-size: contain;
+      vertical-align: sub;
+      margin-right: 3px;
+    }
+  }
+}

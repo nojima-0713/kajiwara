@@ -1,0 +1,174 @@
+// main: ../style.scss
+@use '../mixin/mixin' as *;
+
+
+/*フッター*/
+
+.footer {
+  background: #0068B7;
+  color: white;
+  position: relative;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 35px 60px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  @include sp{
+    padding: 18% 35px 20px;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footer_text {
+  margin-right: 30px;
+  p{
+    line-height: 1.8em;
+  }
+  @include sp{
+    margin-right: 0;
+    width: 98%;
+  }
+}
+
+.footer_text p.f_st{
+  margin-bottom: 4px;
+}
+
+.f_sns_link {
+  display: inline-block;
+  margin-right: 35px;
+  width: 215px;
+  a {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    width: 100%;
+    justify-content: center;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  p {
+    margin-left: 4px;
+  }
+  .sns_link_p{
+   border-bottom: 1px solid white;
+   margin-left: 0;
+  }
+  img {
+    width: 20px;
+    height: auto;
+  }
+  @include sp{
+    display: flex;
+    width: 98%;
+    justify-content: flex-start;
+    margin-top: 8px;
+    p {
+      display: none;
+    }
+    a {
+      margin-right: 10px;
+      img{
+        width: 33px;
+      }
+    }
+
+  }
+}
+
+.hp_link{
+  color: white;
+  p{
+    border-bottom: 1px solid white;
+  }
+  a{
+    display: block;
+    position: relative;
+    padding-left: 13px;
+    margin-top: 10px;
+    &:hover {
+      opacity: .8;
+    }
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      margin: auto;
+      box-sizing: border-box;
+      border: 5px solid transparent;
+      border-left: 8px solid $sub_color;   /* 好みで色を変えてください */
+    }
+  }
+  @include tab{
+    margin-top: 20px;
+  }
+  @include sp{
+    width: 98%;
+  }
+}
+
+.ko-logo{
+  padding-top: 40px;
+  align-self: flex-end;
+  place-content: flex-start;
+  margin-left: auto;
+  img{
+    max-width: 143px;
+    width: 100%;
+  }
+  @include sp{
+    margin-left: inherit;
+  }
+}
+
+.link_ancer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.f_sicle_img {
+  position: absolute;
+  top: -165px;
+  right: 33px;
+  img {
+    max-width: 192px;
+  }
+  @include tab-min{
+    top: 0;
+  }
+  @include sp{
+    width: auto;
+    right: 20%;
+    top: -141px;
+  }
+}
+
+.f_st span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.f_cp {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+  @include sp{
+    font-size: 12px;
+  }
+}

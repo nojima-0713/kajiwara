@@ -1,0 +1,11 @@
+{
+  "dartsass.targetDirectory": "css", //どのフォルダに出力するか
+  "dartsass.autoPrefixBrowsersList": [ //Autoprefixerの指定
+    "> 3% in JP",
+    "ie 11",
+    "android 4.4",
+    "last 1 versions"
+  ],
+  "dartsass.outputFormat": "cssonly",
+  "dartsass.sassBinPath": "/Users/design_section_07/Local Sites/testwp/app/public/wp-content/themes/kajiwara/node_modules/sass/sass.js" 
+}

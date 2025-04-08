@@ -1,0 +1,192 @@
+// compileNested: ../css/$1.css
+@use '../mixin/mixin' as *;
+
+/*プロフィール*/
+
+.profile{
+  @include tab{
+    margin-top: 5%;
+  }
+  @include sp{
+    margin-top: 15%;
+  }
+}
+
+.profile_title {
+  text-align: center;
+  margin-bottom: 5%;
+  @include sp{
+    img{
+      max-width: 185px;
+    }
+  }
+}
+
+.prof_name {
+  font-weight: 700;
+  color: #004B99;
+  font-size: 24px;
+  @include tab-max{
+    text-align: center;
+  }
+}
+
+.prof_text {
+  width: 50%;
+  @include tab-max{
+    margin-top: 3%;
+    width: 85%;
+    min-width: 300px;
+  }
+}
+
+.p_text{
+  @include sp{
+    font-size: 15px;
+  }
+}
+
+.birth {
+  margin-bottom: 20px;
+  @include tab-max{
+    text-align: center;
+  }
+}
+
+.prof_s {
+  font-size: 14px;
+  @include sp{
+    font-size: 13px;
+  }
+}
+
+.prof_r {
+  border-top: 1px dotted;
+  padding: 7px 0;
+}
+
+.p_t_first{
+  padding-bottom: 7px;
+}
+
+.p_box {
+  display: flex;
+  max-width: 750px;
+  flex-flow: row-reverse;
+  margin: 0 auto;
+  @include tab-max{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.p_image {
+  width: 50%;
+  img {
+    max-width: 400px;
+    width: 100%;
+  }
+  @include tab-max{
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.p_suishin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 5%;
+  @include tab-max{
+    flex-direction: column-reverse;
+    width: 85%;
+    min-width: 320px;
+    background-color: #fe0;
+  }
+}
+
+.hukidashi {
+  background: url(../images/hukidasi.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 43px;
+  width: 70%;
+  @include tab-max{
+    background: none;
+    margin-right: 0;
+  }
+}
+
+.su_image {
+  width: 30%;
+  text-align: center;
+  p {
+    display: none;
+  }
+  img {
+    max-width: 350px;
+    width: 100%;
+  }
+  @include tab-max{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-weight: 700;
+      color: #004B99;
+      font-size: 19px;
+      text-align: center;
+      display: inline;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.su_text {
+  width: 84%;
+  margin: 0 auto;
+  padding: 19px 28px 18px 14px;
+  text-align: justify;
+  @include tab-max{
+    padding: 16px 0;
+    max-width: 355px;
+    width: 100%;
+  }
+  @include sp{
+    font-size: 15px;
+    width: 88%;
+  }
+}
+
+.su_title {
+  font-weight: 700;
+  color: #004B99;
+  font-size: 19px;
+  text-align: center;
+  @include tab-max{
+    display: none;
+  }
+}
+
+.s_name {
+  text-align: right;
+  span {
+    &:first-of-type {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    &:last-of-type {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.contact_title {
+  margin-top: 10%;
+  text-align: center;
+}

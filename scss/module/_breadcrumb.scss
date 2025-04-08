@@ -1,0 +1,29 @@
+// main: ../style.scss
+@use '../mixin/mixin' as *;
+
+/*パンくずリスト*/
+
+.breadcrumb-area {
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #3e3e3e;
+  font-size: 14px;
+  span a {
+    text-decoration: none;
+    color: #0C2783;
+    &:hover {
+      color: #D04848;
+    }
+  }
+  @include pc{
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  @include sp{
+    font-size: 13px;
+  }
+}
+
+.fa-angle-right:before {
+  color: #0c2783;
+}
